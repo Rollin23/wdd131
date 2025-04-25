@@ -23,8 +23,9 @@ body {
     margin: 0.5em 0;
 }
 
-.title h2 {
+.title h3 {
     text-transform: uppercase;
+
 }
 
 /* Subtitle color */
