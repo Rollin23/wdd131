@@ -58,3 +58,9 @@ main ol {
     display: block;
     margin: 20px auto;
 }
+
+body {
+    border: 2px solid grey;
+    margin: 0;
+    padding: 16px;
+  }
