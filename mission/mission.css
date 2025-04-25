@@ -1,0 +1,44 @@
+/* Base settings */
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Centered content with max width */
+.content {
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Titles */
+.title h1,
+.title h2 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+}
+
+/* Subtitle color */
+.title h2 {
+    color: #006EB6;
+}
+
+/* Paragraphs are left-aligned even though block is centered */
+main p,
+main ol {
+    text-align: left;
+}
+
+/* Resize logo */
+.logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
