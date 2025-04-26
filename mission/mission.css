@@ -1,4 +1,4 @@
-/* Base settings */
+
 body {
     font-family: "Times New Roman", Times, serif;
     font-size: 19px;
@@ -9,14 +9,14 @@ body {
     justify-content: center;
 }
 
-/* Centered content with max width */
+
 .content {
     max-width: 600px;
     text-align: center;
     padding: 20px;
 }
 
-/* Titles */
+
 .title h1 {
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -63,4 +63,8 @@ body {
     border: 2px solid #BFBFBF;
     margin: 20px;
     padding: 16px;
+  }
+
+  li {
+    margin-bottom: 10px; /* space between list items */
   }
