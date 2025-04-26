@@ -63,7 +63,7 @@ main ol {
 }
 
 body {
-    border: 2px solid #BFBFBF;
+    border: 2px, solid #BFBFBF;
     margin: 20px;
     padding: 16px;
   }
@@ -71,3 +71,10 @@ body {
   li {
     margin-bottom: 10px; /* space between list items */
   }
+
+  .content {
+    max-width: 600px;
+    margin: 40px auto; /* centers and adds space on top/bottom */
+    padding: 0 20px;   /* adds space inside on left and right */
+    text-align: center;
+}
