@@ -14,6 +14,7 @@ body {
     max-width: 600px;
     text-align: center;
     padding: 20px;
+    border: 2px solid #BFBFBF;
 }
 
 
@@ -63,12 +64,11 @@ main ol {
 }
 
 body {
-    border: 2px, solid #BFBFBF;
+    
     margin: 20px;
-    padding: 20px;
+    padding: 16px;
   }
 
   li {
     margin-bottom: 10px; /* space between list items */
   }
-
