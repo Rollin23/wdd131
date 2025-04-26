@@ -3,12 +3,13 @@ body {
     font-family: "Times New Roman", Times, serif;
     font-size: 20px;
     line-height: 1.5;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
+    border: 2px solid #BFBFBF;
+    margin: 5%;
+    padding: 16px;
+    
 }
-
 
 .content {
     max-width: 600px;
@@ -29,6 +30,7 @@ body {
     letter-spacing: 1px;
     font-size: 15px;
     margin-bottom: 0%;
+    color: #006EB6;
 }
 
 .underline {
@@ -42,18 +44,11 @@ body {
 
 }
 
-/* Subtitle color */
-.title h3 {
-    color: #006EB6;
-}
-
-/* Paragraphs are left-aligned even though block is centered */
 main p,
 main ol {
     text-align: left;
 }
 
-/* Resize logo */
 .logo {
     width: 150px;
     height: auto;
@@ -62,12 +57,6 @@ main ol {
     margin-top: 7%;
 }
 
-body {
-    border: 2px solid #BFBFBF;
-    margin: 5%;
-    padding: 16px;
-  }
-
-  li {
+li {
     margin-bottom: 10px; /* space between list items */
-  }
+}
