@@ -11,12 +11,12 @@ body {
     
 }
 
-.dark {
+body.dark {
     background-color: #333;
     color: white;
 }
 
-.dark h2{
+body.dark h2{
     color: rgb(160 212 237)
 }
 .content {
@@ -57,7 +57,7 @@ main ol {
     text-align: left;
 }
 
-.logo {
+.logoImg {
     width: 150px;
     height: auto;
     display: block;
