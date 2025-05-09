@@ -112,7 +112,7 @@ footer {
 }
 
 /* Responsive layout for large screens */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .menu-button {
     display: none;
   }
@@ -133,7 +133,7 @@ footer {
   }
 }
 
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 700px) and (max-width: 1023px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
