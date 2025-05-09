@@ -11,7 +11,7 @@
 }
 
 * {
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
 }
@@ -82,9 +82,9 @@ main h2 {
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 3rem;
   max-width: 600px;
-  margin: 0 auto;
+  margin:  auto;
 }
 
 figure {
@@ -99,7 +99,7 @@ img {
   width: 250px;
   object-fit: cover;
   display: block;
-  margin: 0 auto;
+  margin: 0 ;
 }
 
 /* Footer styles */
@@ -111,7 +111,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* Responsive layout for large screens */
+
 @media (min-width: 900px) {
   .menu-button {
     display: none;
@@ -122,6 +122,8 @@ footer {
     justify-content: center;
     gap: 2rem;
     margin-top: 0;
+    padding: 0;
+    list-style: none;
   }
 
   nav li {
@@ -129,7 +131,19 @@ footer {
   }
 
   .gallery {
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px; /* wider space for 3 full-size images */
+    margin: 2rem auto;
+  }
+
+  .gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
   }
 }
 
