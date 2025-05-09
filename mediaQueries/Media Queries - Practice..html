@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://byui-cit.github.io/learning-modules/modules/css/media-queries/ponder1/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries - Practice.</title>
+    <meta name="description" content="Practice using Media Queries">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://byui-cit.github.io/learning-modules/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="https://byui-cit.github.io/learning-modules/img/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://byui-cit.github.io/learning-modules/img/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="shortcut icon" href="https://byui-cit.github.io/learning-modules/img/favicon/favicon.ico">
+    <link rel="stylesheet" href="./Media Queries - Practice._files/index.css">
+    <link rel="stylesheet" href="./Media Queries - Practice._files/prism-coy.css">
+    <link rel="alternate" href="https://byui-cit.github.io/learning-modules/feed/feed.xml" type="application/atom+xml" title="WDD Learning Modules">
+    <link rel="alternate" href="https://byui-cit.github.io/learning-modules/feed/feed.json" type="application/json" title="WDD Learning Modules">
+  <style>.rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #0000ff;
+  --rdp-background-color: #e7edff;
+  --rdp-accent-color-dark: #3003e1;
+  --rdp-background-color-dark: #180270;
+  --rdp-outline: 2px solid var(--rdp-accent-color); /* Outline border for focused elements */
+  --rdp-outline-selected: 2px solid rgba(0, 0, 0, 0.75); /* Outline border for focused _and_ selected elements */
+
+  margin: 1em;
+}
+
+/* Hide elements for devices that are not screen readers */
+.rdp-vhidden {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute !important;
+  top: 0;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  border: 0 !important;
+}
+
+/* Buttons */
+.rdp-button_reset {
+  appearance: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  color: inherit;
+  outline: none;
+  background: none;
+  font: inherit;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.rdp-button {
+  border: 2px solid transparent;
+}
+
+.rdp-button[disabled] {
+  opacity: 0.25;
+}
+
+.rdp-button:not([disabled]) {
+  cursor: pointer;
+}
+
+.rdp-button:focus:not([disabled]),
+.rdp-button:active:not([disabled]) {
+  color: inherit;
+  border: var(--rdp-outline);
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-button:hover:not([disabled]) {
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-months {
+  display: flex;
+}
+
+.rdp-month {
+  margin: 0 1em;
+}
+
+.rdp-month:first-child {
+  margin-left: 0;
+}
+
+.rdp-month:last-child {
+  margin-right: 0;
+}
+
+.rdp-table {
+  margin: 0;
+  max-width: calc(var(--rdp-cell-size) * 7);
+  border-collapse: collapse;
+}
+
+.rdp-with_weeknumber .rdp-table {
+  max-width: calc(var(--rdp-cell-size) * 8);
+  border-collapse: collapse;
+}
+
+.rdp-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  text-align: left;
+}
+
+.rdp-multiple_months .rdp-caption {
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.rdp-caption_dropdowns {
+  position: relative;
+  display: inline-flex;
+}
+
+.rdp-caption_label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 0.25em;
+  white-space: nowrap;
+  color: currentColor;
+  border: 0;
+  border: 2px solid transparent;
+  font-family: inherit;
+  font-size: 140%;
+  font-weight: bold;
+}
+
+.rdp-nav {
+  white-space: nowrap;
+}
+
+.rdp-multiple_months .rdp-caption_start .rdp-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.rdp-multiple_months .rdp-caption_end .rdp-nav {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.rdp-nav_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--rdp-cell-size);
+  height: var(--rdp-cell-size);
+  padding: 0.25em;
+  border-radius: 100%;
+}
+
+/* ---------- */
+/* Dropdowns  */
+/* ---------- */
+
+.rdp-dropdown_year,
+.rdp-dropdown_month {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.rdp-dropdown {
+  appearance: none;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: inherit;
+  opacity: 0;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.rdp-dropdown[disabled] {
+  opacity: unset;
+  color: unset;
+}
+
+.rdp-dropdown:focus:not([disabled]) + .rdp-caption_label,
+.rdp-dropdown:active:not([disabled]) + .rdp-caption_label {
+  border: var(--rdp-outline);
+  border-radius: 6px;
+  background-color: var(--rdp-background-color);
+}
+
+.rdp-dropdown_icon {
+  margin: 0 0 0 5px;
+}
+
+.rdp-head {
+  border: 0;
+}
+
+.rdp-head_row,
+.rdp-row {
+  height: 100%;
+}
+
+.rdp-head_cell {
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: 700;
+  text-align: center;
+  height: 100%;
+  height: var(--rdp-cell-size);
+  padding: 0;
+}
+
+.rdp-tbody {
+  border: 0;
+}
+
+.rdp-tfoot {
+  margin: 0.5em;
+}
+
+.rdp-cell {
+  width: var(--rdp-cell-size);
+  height: 100%;
+  height: var(--rdp-cell-size);
+  padding: 0;
+  text-align: center;
+}
+
+.rdp-weeknumber {
+  font-size: 0.75em;
+}
+
+.rdp-weeknumber,
+.rdp-day {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: var(--rdp-cell-size);
+  max-width: var(--rdp-cell-size);
+  height: var(--rdp-cell-size);
+  margin: 0;
+  border: 2px solid transparent;
+  border-radius: 100%;
+}
+
+.rdp-day_today:not(.rdp-day_outside) {
+  font-weight: bold;
+}
+
+.rdp-day_selected:not([disabled]),
+.rdp-day_selected:focus:not([disabled]),
+.rdp-day_selected:active:not([disabled]),
+.rdp-day_selected:hover:not([disabled]) {
+  color: white;
+  background-color: var(--rdp-accent-color);
+}
+
+.rdp-day_selected:focus:not([disabled]) {
+  border: var(--rdp-outline-selected);
+}
+
+.rdp:not([dir='rtl']) .rdp-day_range_start:not(.rdp-day_range_end) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rdp:not([dir='rtl']) .rdp-day_range_end:not(.rdp-day_range_start) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.rdp[dir='rtl'] .rdp-day_range_start:not(.rdp-day_range_end) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.rdp[dir='rtl'] .rdp-day_range_end:not(.rdp-day_range_start) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.rdp-day_range_end.rdp-day_range_start {
+  border-radius: 100%;
+}
+
+.rdp-day_range_middle {
+  border-radius: 0;
+}
+</style></head>
+  <body data-new-gr-c-s-check-loaded="14.1234.0" data-gr-ext-installed="">
+    <header>
+      <div class="branding">
+        <a href="https://byui-cit.github.io/learning-modules/">
+          <img src="./Media Queries - Practice._files/TwoLineMonogram_white.svg" alt="BYU-I logo" class="logo">
+        </a>
+        <h1 class="vertical-text">WDD Learning Modules</h1>
+      </div>
+      <nav>
+        <ul class="nav">
+            <li class="nav-item">
+              <a href="https://byui-cit.github.io/learning-modules/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://byui-cit.github.io/learning-modules/modules/html/">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://byui-cit.github.io/learning-modules/modules/js/">JS</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://byui-cit.github.io/learning-modules/modules/css/">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://byui-cit.github.io/learning-modules/modules/design/">Design</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://byui-cit.github.io/learning-modules/modules/general/">General</a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="tmpl-post">
+      
+<h1>Media Queries - Practice.</h1>
+
+
+
+
+<h2 id="preparation" tabindex="-1">Preparation <a class="direct-link" href="https://byui-cit.github.io/learning-modules/modules/css/media-queries/ponder1/#preparation" aria-hidden="true">#</a></h2>
+<p>You will need your editor open to create some new files to contain the work on this exercise.</p>
+<p>These activities will be most effective if you <strong>try</strong> them first before you look at the solution. And after you do look at the solution...<strong>do not</strong> copy and paste the code. Read through it, try to understand what it is doing...then go fix your code.</p>
+<h2 id="step-1:-file-and-folder-setup" tabindex="-1"><strong>Step 1</strong>: File and Folder Setup <a class="direct-link" href="https://byui-cit.github.io/learning-modules/modules/css/media-queries/ponder1/#step-1:-file-and-folder-setup" aria-hidden="true">#</a></h2>
+<ol>
+<li>Create a new HTML file named "media-query.html".</li>
+<li>Add a CSS file named "media-query.css".</li>
+</ol>
+<h2 id="step-2:-html" tabindex="-1"><strong>Step 2:</strong> HTML <a class="direct-link" href="https://byui-cit.github.io/learning-modules/modules/css/media-queries/ponder1/#step-2:-html" aria-hidden="true">#</a></h2>
+<ol>
+<li>
+<p>In your media-query.html file, create a valid HTML page with standard head content including:</p>
+<ul>
+<li>Meta with a Charset Attribute</li>
+<li>Meta Viewport Element</li>
+<li>Title Element</li>
+<li>Link to a Google Font named "Roboto".</li>
+<li>Link reference to your CSS file.</li>
+</ul>
+</li>
+<li>
+<p>In the <code>body</code> of the HTML document, add a <code>header</code> with an <code>h1</code>, a <code>main</code> element with two <code>section</code> elements, and a <code>footer</code> element.</p>
+<ul>
+<li>The h1 element should contain the words "Media Query Example".</li>
+<li>Each section h2 heading contains a scripture with book, chapter, and verse.</li>
+<li>The section paragraph contains a copy of the actual scripture referenced in the heading.</li>
+<li>The footer should contain your name.</li>
+</ul>
+</li>
+</ol>
+<details open="">
+<summary>Solution 1</summary>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Media Query Example<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">&gt;</span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>main</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">&gt;</span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>2 Nephi 32:9<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>But behold, I say unto you that ye must pray always, and not faint; that ye must not perform any thing unto the Lord save in the first place ye shall pray unto the Father in the name of Christ, that he will consecrate thy performance unto thee, that thy performance may be for the welfare of thy soul.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">&gt;</span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Helaman 12:24<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span><br>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>And may God grant, in his great fulness, that men might be brought unto repentance and good works, that they might be restored unto grace for grace, according to their works.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><br>  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>main</span><span class="token punctuation">&gt;</span></span><br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token punctuation">&gt;</span></span><br>  [Your Full Name Here]<br><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">&gt;</span></span></code></pre>
+</details>
+<h2 id="step-3:-css" tabindex="-1"><strong>Step 3:</strong> CSS <a class="direct-link" href="https://byui-cit.github.io/learning-modules/modules/css/media-queries/ponder1/#step-3:-css" aria-hidden="true">#</a></h2>
+<p>Style the document as shown in the example screenshots given below.</p>
+<ol>
+<li>
+<p>Use the Google Font - Roboto in the body rule,</p>
+</li>
+<li>
+<p>The header, main, and footer each</p>
+<ul>
+<li>have a maximum width of 640 pixels</li>
+<li>are centered on the page using margin: 1rem auto</li>
+<li>include a faint border and appropriate padding</li>
+<li>have a blueish background color of your choice</li>
+</ul>
+</li>
+<li>
+<p>Set the main element to be a CSS grid with a grid template of only one column, and a equal gap of 1rem, and</p>
+</li>
+<li>
+<p>Set the section elements to also have padding and a white background.</p>
+</li>
+<li>
+<p>Write a containing media query to be applied at a viewport width of 500px or greater (<code>@media screen and (min-width: 500px)</code>).</p>
+</li>
+<li>
+<p>Change the <code>header</code> to black background with white text</p>
+</li>
+<li>
+<p>Change the <code>main</code> element to display two columns of equal size.</p>
+</li>
+</ol>
+<details open="">
+<summary>Partial Solution</summary>
+<pre class="language-css"><code class="language-css"><span class="token selector">body</span> <span class="token punctuation">{</span><br>  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Roboto'</span><span class="token punctuation">,</span> sans-serif<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">header, main, footer</span> <span class="token punctuation">{</span><br>  <span class="token property">max-width</span><span class="token punctuation">:</span> 640px<span class="token punctuation">;</span><br>  <span class="token property">margin</span><span class="token punctuation">:</span> 1rem auto<span class="token punctuation">;</span><br>  <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #bbb<span class="token punctuation">;</span><br>  <span class="token property">padding</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span><br>  <span class="token property">background-color</span><span class="token punctuation">:</span> #e6f2ff<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">main</span> <span class="token punctuation">{</span><br>  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span><br>  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> 1fr<span class="token punctuation">;</span><br>  <span class="token property">grid-gap</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span><br><span class="token punctuation">}</span><br><br><span class="token selector">section</span> <span class="token punctuation">{</span><br>  <span class="token property">padding</span><span class="token punctuation">:</span> 1rem<span class="token punctuation">;</span><br>  <span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+</details>
+<h2 id="example-screenshots" tabindex="-1">Example Screenshots <a class="direct-link" href="https://byui-cit.github.io/learning-modules/modules/css/media-queries/ponder1/#example-screenshots" aria-hidden="true">#</a></h2>
+<p><img src="./Media Queries - Practice._files/media-query-sm.png" alt="Figure 1: Mobile View Screenshot"></p>
+<p><img src="./Media Queries - Practice._files/media-query-lg.png" alt="Figure 2: Wide View Screenshot"></p>
+
+</main>
+    <footer>
+      <p class="license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="./Media Queries - Practice._files/88x31.png"> </a><br>This work is licensed under a
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+          International License</a>.</p>
+    </footer><!-- Current page: /learning-modules/modules/css/media-queries/ponder1/ -->
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
