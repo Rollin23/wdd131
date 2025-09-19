@@ -1,0 +1,62 @@
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #BFBFBF;
+    margin: 5%;
+    padding: 16px;
+    
+}
+
+.content {
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.title h1 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    margin-bottom: 1%;
+}
+
+.title h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 15px;
+    margin-bottom: 0%;
+    color: #378CC6;
+}
+
+.underline {
+    height: 1px;
+    border: none;
+    background-color: #BFBFBF;
+    width: 100%;
+    margin: 0 auto 16px 0;
+    text-align: center;
+    margin-bottom: 7%;
+
+}
+
+main p,
+main ol {
+    text-align: left;
+}
+
+.logoImg {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    margin-top: 7%;
+}
+
+li {
+    margin-bottom: 10px;
+}
