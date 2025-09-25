@@ -11,6 +11,15 @@ body {
     
 }
 
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark h2{
+    color: rgb(160 212 237)
+}
+
 .content {
     max-width: 600px;
     text-align: center;
