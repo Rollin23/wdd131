@@ -1,0 +1,122 @@
+
+:root {
+    --link-color: #AF1B3F;
+    --text-dark: #473144;
+    --text-light: #ebebeb;
+    --border-color: #EFC69B;
+    --body-font: Georgia, Serif;
+    --headline-font: Impact, Serif;
+    }
+    header h1 {
+        margin: 0 auto;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+    }
+    .skiptocontent a {
+        position: absolute;
+        top: -50px;
+    }
+    .skiptocontent a:focus {
+        top:0px
+    }
+
+    .nav-wrapper {
+        width: 100%;
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    nav {
+        max-width: 1200px; /* or match your content width */
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        margin: 0;
+        gap: 20px;
+        padding-right: 3rem; /* aligns with filters box */
+    }
+
+
+    nav a {
+        color: var(--link-color);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 2rem;
+        padding: 0 3rem;
+    }
+
+    #nav-div {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 3rem; 
+    }
+
+    #filters {
+        border: 1px solid var(--border-color);
+        padding: 10px;
+        margin: 20px;
+        width: 80%;
+        justify-self: center;
+        text-align: center;
+    }
+
+    .itemBook {
+        display: flex;
+        align-items: stretch;
+        padding-top: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .mainBook,
+    .secondBook {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: center;  
+    }
+
+    .mainBook h3,
+    .secondBook h3 {
+        color: var(--link-color);
+        margin-top: 0;
+    }
+
+    .mainBook img,
+    .secondBook img {
+        display: block;
+        width: 180px;
+        margin: 10px auto;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+    }
+    .metaBook {
+        width: 150px;
+        text-align: right;
+        border-right: 1px solid var(--border-color);
+        padding-right: 25px;
+        margin-right: 25px;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+
+    .metaBook h5,
+    .metaBook p {
+        margin: 4px 0;
+    }
+
