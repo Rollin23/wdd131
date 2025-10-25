@@ -23,8 +23,8 @@
 
     .nav-wrapper {
         width: 100%;
-        border-top: 1px solid var(--border-color);
-        border-bottom: 1px solid var(--border-color);
+        border-top: 2px solid var(--border-color);
+        border-bottom: 2px solid var(--border-color);
     }
 
     nav {
@@ -39,9 +39,8 @@
         list-style: none;
         margin: 0;
         gap: 20px;
-        padding-right: 3rem; /* aligns with filters box */
+        padding-right: 3rem; 
     }
-
 
     nav a {
         color: var(--link-color);
@@ -67,7 +66,7 @@
     }
 
     #filters {
-        border: 1px solid var(--border-color);
+        border: 2px solid var(--border-color);
         padding: 10px;
         margin: 20px;
         width: 80%;
@@ -102,13 +101,13 @@
         display: block;
         width: 180px;
         margin: 10px auto;
-        border: 1px solid var(--border-color);
+        border: 2px solid var(--border-color);
         border-radius: 4px;
     }
     .metaBook {
         width: 150px;
         text-align: right;
-        border-right: 1px solid var(--border-color);
+        border-right: 2px solid var(--border-color);
         padding-right: 25px;
         margin-right: 25px;
         flex-direction: column;
@@ -118,5 +117,6 @@
     .metaBook h5,
     .metaBook p {
         margin: 4px 0;
+        font-weight: 400;
     }
 
