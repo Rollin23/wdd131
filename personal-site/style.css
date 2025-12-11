@@ -12,7 +12,7 @@
   --paragraph-font: "Source Sans Pro", sans-serif;
 
   --headline-color-on-white: var(--primary-color);
-  --headline-color-on-color: white;
+  --headline-color-on-color: rgb(7, 7, 7);
   --paragraph-color-on-white: var(--primary-color);
   --paragraph-color-on-color: white;
   --paragraph-background-color: var(--primary-color);
