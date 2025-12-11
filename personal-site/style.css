@@ -173,6 +173,7 @@ footer .social {
   display: flex;
   gap: 1.5em;
   margin-bottom: 0.5em;
+  margin-top: 1.5em;
 }
 
 footer .social a img {
@@ -217,6 +218,7 @@ footer a {
     .social {
     display: flex;
     gap: 1.5em;
+    margin-top: 1.5em;
     }
 
     .social a img {
@@ -290,6 +292,7 @@ footer a {
     .social {
         display: flex;
         gap: 1.5em;
+        margin-top: 1.5em;
     }
     
     .social a img {

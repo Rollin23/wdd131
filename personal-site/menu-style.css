@@ -166,15 +166,18 @@ footer .social {
   display: flex;
   gap: 1.5em;
   margin-bottom: 0.5em;
+  padding-bottom: .5em;
+  margin-top: 1.5em;
 }
 
 footer .social a img {
-  height: 50px;
+  height: 65px;
 }
 
 footer a {
   font-size: 0.6em;
   text-decoration: none;
+  padding-bottom: .5em;
 }
 
 @media (max-width: 1023px) and (min-width: 900px) {
@@ -197,16 +200,18 @@ footer a {
     font-size: 0.6em;
     color: var(--text-dark);
     text-decoration: none;
+    padding-bottom: .5em;
     }
 
 
     .social {
     display: flex;
     gap: 1.5em;
+    margin-top: 1.5em;
     }
 
     .social a img {
-    height: 24px;
+    height: 65px;
     }
 }
 
@@ -251,9 +256,10 @@ footer a {
     }
     
     footer a {
-        font-size: 0.6em;
+        font-size: 0.9em;
         color: var(--text-dark);
         text-decoration: none;
+        padding-bottom: .5em;
     }
     
     footer a:hover {
@@ -263,9 +269,10 @@ footer a {
     .social {
         display: flex;
         gap: 1.5em;
+        margin-top: 1.5em;
     }
     
     .social a img {
-        height: 24px;
+        height: 65px;
     }
 }
